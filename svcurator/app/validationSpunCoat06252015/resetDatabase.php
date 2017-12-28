@@ -42,7 +42,7 @@
 	// numVariants
 	for($i = 1; $i <= $numVariants; $i++){
 
-		$tableName = "variant_" . $i;
+		$tableName = "{{currentViewGetVariant_1.index + 1}} / {{getvariant_1.size}}" . $i;
 
 		$mysqli->query("CREATE TABLE $tableName (id VARCHAR(256))");
 		$mysqli->query("ALTER TABLE $tableName ADD UNIQUE (id)");

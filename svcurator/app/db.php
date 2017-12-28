@@ -34,7 +34,7 @@
       
     for($i = 1; $i <= $row[0] - 1; $i++) {
 
-      $variant = 'variant_' . $i;
+      $variant = '{{currentViewGetVariant_1.index + 1}} / {{getvariant_1.size}}' . $i;
 
       $newQuery = "INSERT IGNORE INTO $variant (id) VALUES ($userid)";
       $mysqli->query($newQuery);

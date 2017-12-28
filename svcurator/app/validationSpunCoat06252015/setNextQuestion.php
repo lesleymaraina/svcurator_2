@@ -19,7 +19,7 @@
 	$row = $result->fetch_assoc();
 	$currVariant = substr($row["variant"], 8);
 
-	$table = "variant_" . ($currVariant + $toAdd);
+	$table = "{{currentViewGetVariant_1.index + 1}} / {{getvariant_1.size}}" . ($currVariant + $toAdd);
 
 	$query_2 = "UPDATE currVariant SET variant = '$table' WHERE id=$id";
 	$mysqli->query($query_2);

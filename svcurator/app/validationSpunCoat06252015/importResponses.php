@@ -11,7 +11,7 @@
 		exit();
 	}
 
-	$variant = 'variant_' . $variantNumber;
+	$variant = '{{currentViewGetVariant_1.index + 1}} / {{getvariant_1.size}}' . $variantNumber;
 	$id = $_SESSION['sessionID'];
 
 	// current variant

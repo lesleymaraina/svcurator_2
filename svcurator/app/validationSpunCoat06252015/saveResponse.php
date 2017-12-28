@@ -13,7 +13,7 @@
 		exit();
 	}
 
-	$variant = "variant_" . $variant;
+	$variant = "{{currentViewGetVariant_1.index + 1}} / {{getvariant_1.size}}" . $variant;
 	$q = "q" . $qNumber;
 	$id = $_SESSION['sessionID'];
 
